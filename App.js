@@ -1,3 +1,4 @@
+/* eslint-disable react-native/no-inline-styles */
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
@@ -6,25 +7,26 @@ import HomeScreen from './lib/screens/HomeScreen.js';
 import LoginScreen from './lib/screens/LoginScreen.js';
 import SplashScreen from './lib/screens/SplashScreen.js';
 import OnBoardScreen from './lib/screens/OnBoardScreen.js';
-import {SafeAreaView} from 'react-native';
+import {View, StatusBar} from 'react-native';
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
-    <SafeAreaView style={{height: '100%', width: '100%'}}>
+    <View style={{width: '100%', height: '100%'}}>
+      <StatusBar translucent backgroundColor="transparent" />
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Home"
           tabBar={() => null}
-          screenOptions={{headerShown: false}}>
+          headerMode="none">
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="Splash" component={SplashScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="OnBoard" component={OnBoardScreen} />
         </Stack.Navigator>
       </NavigationContainer>
-    </SafeAreaView>
+    </View>
   );
 }
 
