@@ -1,11 +1,15 @@
 /* eslint-disable react-native/no-inline-styles */
-import * as React from 'react';
+import React, {Component} from 'react';
 import {View, Text, ScrollView, Image} from 'react-native';
 import styles from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {SearchBar} from '@Components';
 import Icon from 'react-native-vector-icons/FontAwesome';
-export default class HomeScreen extends React.Component {
+export default class HomeScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {value: ''};
+  }
   render() {
     const navigation = this.props.navigation;
     return (
@@ -41,9 +45,12 @@ export default class HomeScreen extends React.Component {
           </View>
           <SearchBar
             placeholder="Tìm kiếm...."
-            value=""
+            value={this.state.value}
             onClear={() => {
-              console.log('ok');
+              this.setState({value: ''});
+            }}
+            onChangeText={(text) => {
+              this.setState({value: text});
             }}
           />
         </ScrollView>

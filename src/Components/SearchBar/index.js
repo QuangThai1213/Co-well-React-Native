@@ -18,7 +18,7 @@ export default class SearchBar extends Component {
     } = this.props;
     return (
       <View style={styles.container}>
-        <Icon name="search" size={20} color={'red'} />
+        <Icon name="search" size={20} color={'rgba(24,27,25,1)'} />
         <TextInput
           placeholder={placeholder}
           style={[styles.input]}
@@ -41,4 +41,5 @@ SearchBar.propTypes = {
   placeholder: PropTypes.string.isRequired,
   value: PropTypes.string.isRequired,
   onClear: PropTypes.func.isRequired,
+  onChangeText: PropTypes.func.isRequired,
 };

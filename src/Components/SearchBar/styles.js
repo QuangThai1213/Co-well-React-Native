@@ -11,8 +11,8 @@ export default StyleSheet.create({
     paddingRight: 10,
     paddingLeft: 15,
     height: 58,
-    borderRadius: 20,
-    backgroundColor: '#fff',
+    borderRadius: 15,
+    backgroundColor: 'rgba(242,243,242,1)',
     elevation: 2,
   },
   input: {
@@ -27,10 +27,5 @@ export default StyleSheet.create({
     height: 20,
     resizeMode: 'contain',
     margin: 10,
-  },
-  separator: {
-    width: 0.5,
-    height: 20,
-    backgroundColor: '#ccc',
   },
 });
