@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 import {View, Text, ScrollView, Image} from 'react-native';
 import styles from './styles';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import {SearchBar} from '@Components';
+import {SearchBar, HorizontalListItem} from '@Components';
 import Icon from 'react-native-vector-icons/FontAwesome';
 export default class HomeScreen extends Component {
   constructor(props) {
@@ -124,6 +124,7 @@ export default class HomeScreen extends Component {
               Xem thêm
             </Text>
           </View>
+          <HorizontalListItem />
         </ScrollView>
       </SafeAreaView>
     );
