@@ -1,6 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {View, Text, Image, TextInput, TouchableOpacity} from 'react-native';
+import {CustomButton} from '@Components';
 import styles from './styles';
 
 export default class LoginScreen extends Component {
@@ -69,21 +70,7 @@ export default class LoginScreen extends Component {
                 </Text>
               </View>
             </TouchableOpacity>
-            <TouchableOpacity
-              style={styles.buttonFacebook}
-              onPress={this.onPress}>
-              <View
-                style={{
-                  height: 55,
-                  width: '70%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}>
-                <Text style={styles.textButtonFacebook}>
-                  Đăng nhập bằng Facebook
-                </Text>
-              </View>
-            </TouchableOpacity>
+            <CustomButton />
           </View>
         </View>
       </View>
