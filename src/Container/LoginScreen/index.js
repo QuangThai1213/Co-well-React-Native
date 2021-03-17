@@ -55,22 +55,16 @@ export default class LoginScreen extends Component {
             <Text style={{fontSize: 14, color: 'rgba(130,130,130,1)'}}>
               Hoặc đăng nhập bằng Google - Facebook
             </Text>
-            <TouchableOpacity
-              style={styles.buttonGoogle}
-              onPress={this.onPress}>
-              <View
-                style={{
-                  height: 55,
-                  width: '70%',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                }}>
-                <Text style={styles.textButtonGoogle}>
-                  Đăng nhập bằng Google
-                </Text>
-              </View>
-            </TouchableOpacity>
-            <CustomButton />
+            <CustomButton
+              text="Đăng nhập bằng Google"
+              buttonStyle={styles.buttonGoogle}
+              textButtonStyle={styles.textButtonGoogle}
+            />
+            <CustomButton
+              text="Đăng nhập bằng Google"
+              buttonStyle={styles.buttonFacebook}
+              textButtonStyle={styles.textButtonFacebook}
+            />
           </View>
         </View>
       </View>

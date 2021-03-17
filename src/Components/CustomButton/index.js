@@ -3,12 +3,6 @@ import {View, Text, TouchableOpacity} from 'react-native';
 import defaultstyles from './styles';
 import PropTypes from 'prop-types';
 
-CustomButton.propTypes = {
-  text: PropTypes.string,
-  buttonStyle: PropTypes.object,
-  textButtonStyle: PropTypes.object,
-};
-
 export default class CustomButton extends Component {
   constructor(props) {
     super(props);
@@ -23,3 +17,9 @@ export default class CustomButton extends Component {
     );
   }
 }
+
+CustomButton.propTypes = {
+  text: PropTypes.string.isRequired,
+  buttonStyle: PropTypes.object.isRequired,
+  textButtonStyle: PropTypes.object.isRequired,
+};
