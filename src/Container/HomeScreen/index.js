@@ -1,5 +1,6 @@
 import * as React from 'react';
-import {View, StyleSheet, Button, StatusBar} from 'react-native';
+import {View, Button} from 'react-native';
+import styles from './styles';
 
 export default class HomeScreen extends React.Component {
   render() {
@@ -28,11 +29,3 @@ export default class HomeScreen extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-import {View, StyleSheet, Image, ImageBackground} from 'react-native';
+import {View, Image, ImageBackground} from 'react-native';
+import styles from './styles';
 
 export default class SplashScreen extends Component {
   render() {
@@ -23,18 +24,3 @@ export default class SplashScreen extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {flex: 1, justifyContent: 'center', alignItems: 'center'},
-  background: {
-    width: '100%',
-    height: '100%',
-    justifyContent: 'center',
-    resizeMode: 'cover',
-    alignItems: 'center',
-  },
-  logo: {
-    width: 161,
-    height: 93,
-  },
-});
