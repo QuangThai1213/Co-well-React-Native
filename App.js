@@ -16,7 +16,11 @@ const Stack = createStackNavigator();
 function App() {
   return (
     <View style={{width: '100%', height: '100%'}}>
-      <StatusBar translucent backgroundColor="transparent" />
+      <StatusBar
+        translucent
+        backgroundColor="transparent"
+        barStyle="dark-content"
+      />
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Test" headerMode="none">
           <Stack.Screen name="Test" component={TestScreen} />
