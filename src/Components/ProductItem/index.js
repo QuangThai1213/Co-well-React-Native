@@ -18,7 +18,7 @@ export default class ProductItem extends Component {
         <Text style={defaultstyles.title}>{product.title}</Text>
         <Text style={defaultstyles.subtitle}>{product.number}</Text>
         <View style={defaultstyles.priceContainer}>
-          <Text style={defaultstyles.priceText}>{this.props.price}</Text>
+          <Text style={defaultstyles.priceText}>{product.price}</Text>
           <TouchableOpacity style={defaultstyles.plusButton}>
             <Icon name="plus" size={20} color={'white'} />
           </TouchableOpacity>
