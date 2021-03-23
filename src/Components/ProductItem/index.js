@@ -9,9 +9,13 @@ export default class ProductItem extends Component {
     super(props);
   }
   render() {
-    const {product} = this.props;
+    const {product, navigation} = this.props;
     return (
-      <View style={defaultstyles.container}>
+      <TouchableOpacity
+        style={defaultstyles.container}
+        onPress={() => {
+          navigation.navigate('Detail', {product: product});
+        }}>
         <View style={defaultstyles.imageContainer}>
           <Image style={defaultstyles.image} source={{uri: product.image}} />
         </View>
@@ -23,7 +27,7 @@ export default class ProductItem extends Component {
             <Icon name="plus" size={20} color={'white'} />
           </TouchableOpacity>
         </View>
-      </View>
+      </TouchableOpacity>
     );
   }
 }

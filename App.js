@@ -3,11 +3,14 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {TestScreen} from '@Containers';
-import {HomeScreen} from '@Containers';
-import {LoginScreen} from '@Containers';
-import {SplashScreen} from '@Containers';
-import {OnBoardScreen} from '@Containers';
+import {
+  TestScreen,
+  HomeScreen,
+  LoginScreen,
+  SplashScreen,
+  OnBoardScreen,
+  DetailScreen,
+} from '@Containers';
 
 import {View, StatusBar} from 'react-native';
 
@@ -28,6 +31,7 @@ function App() {
           <Stack.Screen name="Splash" component={SplashScreen} />
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="OnBoard" component={OnBoardScreen} />
+          <Stack.Screen name="Detail" component={DetailScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

@@ -2,16 +2,12 @@ import {Platform, StyleSheet, Dimensions} from 'react-native';
 
 const {width} = Dimensions.get('window');
 export default StyleSheet.create({
-  banner: {
-    flex: 1,
-    flexDirection: 'row',
-  },
-  textContainer: {
+  container: {
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
+    width: width,
     paddingHorizontal: 20,
-    paddingTop: 30,
-    alignItems: 'center',
+    paddingVertical: 20,
   },
 });

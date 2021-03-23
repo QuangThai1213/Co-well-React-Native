@@ -7,15 +7,18 @@ export default class HorizontalListItem extends Component {
   constructor(props) {
     super(props);
   }
-  renderItem = (item) => <ProductItem product={item} />;
+  renderItem = (item, navigation) => (
+    <ProductItem product={item} navigation={navigation} />
+  );
 
   render() {
+    let navigation = this.props.navigation;
     return (
       <FlatList
         style={defaultstyles.container}
         horizontal={true}
         data={this.props.data}
-        renderItem={({item}) => this.renderItem(item)}
+        renderItem={({item}) => this.renderItem(item, navigation)}
         keyExtractor={(item) => item.id}
         showsVerticalScrollIndicator={false}
         showsHorizontalScrollIndicator={false}
@@ -26,4 +29,5 @@ export default class HorizontalListItem extends Component {
 
 HorizontalListItem.propTypes = {
   data: PropTypes.array.isRequired,
+  navigation: PropTypes.any,
 };
