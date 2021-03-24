@@ -2,9 +2,10 @@ import React, {Component} from 'react';
 import {View} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import styles from './styles';
+import PropTypes from 'prop-types';
 export default class TopBar extends Component {
   render() {
-    const {goBack} = this.props.navigation;
+    const {navigation} = this.props;
     return (
       <View style={styles.container}>
         <Icon
@@ -12,7 +13,7 @@ export default class TopBar extends Component {
           size={30}
           color={'black'}
           onPress={() => {
-            goBack();
+            navigation.navigate('Home');
           }}
         />
         <Icon name="shopping-cart" size={30} color={'black'} />
@@ -20,3 +21,7 @@ export default class TopBar extends Component {
     );
   }
 }
+
+TopBar.propTypes = {
+  navigate: PropTypes.any,
+};

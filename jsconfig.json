@@ -2,9 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./src/",
     "paths": {
-      "@common": ["Common"],
-      "@containers": ["Containers"],
-      "@components": ["Components"],
+      "@Common": ["Common"],
+      "@Containers": ["Containers"],
+      "@Components": ["Components"]
     }
   },
   "exclude": ["node_modules"]
