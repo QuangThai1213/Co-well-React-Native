@@ -1,6 +1,6 @@
-import {Platform, StyleSheet, Dimensions} from 'react-native';
+import {StyleSheet} from 'react-native';
 
-const {width} = Dimensions.get('window');
+// const {width} = Dimensions.get('window');
 export default StyleSheet.create({
   banner: {
     flex: 1,

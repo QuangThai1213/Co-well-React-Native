@@ -1,6 +1,13 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {View, Text, Image, TextInput, ScrollView} from 'react-native';
+import {
+  View,
+  Text,
+  Image,
+  TextInput,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import styles from './styles';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -61,6 +68,7 @@ export default class DetailScreen extends Component {
                 style={{
                   flexDirection: 'row',
                   alignItems: 'center',
+                  paddingTop: 31,
                 }}>
                 <Icon
                   name="minus"
@@ -105,20 +113,28 @@ export default class DetailScreen extends Component {
             </View>
             <ExpandableListView
               data={[
-                '1',
-                '2',
-                '3',
-                '3',
-                '3',
-                '3',
-                '3',
-                '3',
-                '3',
-                '3',
-                '3',
-                '3',
+                {
+                  title: 'Thông tin sản phẩm',
+                  description:
+                    'Táo rất bổ dưỡng. Táo có thể tốt cho việc giảm cân. táo có thể tốt cho tim của bạn. Là một phần của chế độ ăn uống lành mạnh và đa dạng. Táo rất bổ dưỡng. Táo có thể tốt cho việc giảm cân.',
+                },
+                {title: 'Dinh dưỡng', description: 'OKOK', subTitle: '100g'},
+                {title: 'Đánh giá', description: 'OKOK', star: 5},
               ]}
             />
+            <TouchableOpacity
+              style={{
+                backgroundColor: 'rgba(83,177,117,1)',
+                alignItems: 'center',
+                justifyContent: 'center',
+                borderRadius: 15,
+                marginHorizontal: 25,
+                marginBottom: 20,
+              }}>
+              <Text style={{fontSize: 20, paddingVertical: 10, color: 'white'}}>
+                Thêm vào giỏ hàng
+              </Text>
+            </TouchableOpacity>
           </SafeAreaView>
         </ScrollView>
       </View>
