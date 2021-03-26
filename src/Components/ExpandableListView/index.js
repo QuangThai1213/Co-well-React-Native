@@ -1,13 +1,12 @@
-/* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 
-import {View, StyleSheet, FlatList} from 'react-native';
+import {View, FlatList} from 'react-native';
 
 import ExpandableListViewItem from './ExpanableListViewItem';
+import styles from './styles.js';
 
 export default class ExpandableListView extends Component {
   render() {
-    console.log(this.props.data[0]);
     return (
       <View style={styles.container}>
         <FlatList
@@ -22,13 +21,3 @@ export default class ExpandableListView extends Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    backgroundColor: '#ecf0f1',
-    padding: 8,
-    paddingHorizontal: 30,
-  },
-});

@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {View, Text, TouchableOpacity, LayoutAnimation} from 'react-native';
-import PropTypes from 'prop-types';
+import styles from './styles.js';
 import Icon from 'react-native-vector-icons/FontAwesome';
 export default class ExpandableListViewItem extends Component {
   constructor(props) {
@@ -42,37 +42,16 @@ export default class ExpandableListViewItem extends Component {
   }
   render() {
     let item = this.props.item;
-    console.log(item.star);
     return (
-      <View style={{marginTop: 35}}>
+      <View style={styles.container}>
         <TouchableOpacity
           onPress={() => this.onPress()}
-          style={{
-            height: 50,
-            justifyContent: 'center',
-            alignItems: 'center',
-            // backgroundColor: '#1EACA8',
-          }}>
-          <View
-            style={{
-              width: '100%',
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-            }}>
+          style={styles.subContainer}>
+          <View style={styles.leftSection}>
             <Text style={{fontSize: 16, fontWeight: 'bold'}}>{item.title}</Text>
             <View style={{flexDirection: 'row', alignItems: 'center'}}>
               {item.subTitle !== null && (
-                <Text
-                  style={{
-                    fontSize: 9,
-                    color: 'rgba(124,124,124,1)',
-                    marginRight: 15,
-                    padding: 4,
-                    backgroundColor: 'rgba(235,235,235,1)',
-                  }}>
-                  {item.subTitle}
-                </Text>
+                <Text style={styles.subTitle}>{item.subTitle}</Text>
               )}
               {item.star !== undefined && this.renderStar(5)}
               <Icon
@@ -88,15 +67,9 @@ export default class ExpandableListViewItem extends Component {
             height: this.state.expanded === true ? null : 0,
             overflow: 'hidden',
           }}>
-          <Text style={{fontSize: 13, color: 'rgba(124,124,124,1)'}}>
-            {item.description}
-          </Text>
+          <Text style={styles.description}>{item.description}</Text>
         </View>
       </View>
     );
   }
 }
-
-// ExpandableListViewItem.propTypes = {
-//   navigation: PropTypes.any,
-// };
