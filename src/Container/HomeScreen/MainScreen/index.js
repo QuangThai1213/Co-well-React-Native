@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
-import {View, Text, ScrollView, Image, StatusBar} from 'react-native';
+import {View, Text, ScrollView, Image} from 'react-native';
 import styles from './styles';
 import {SearchBar, HorizontalListItem} from '@Components';
 import Icon from 'react-native-vector-icons/FontAwesome';

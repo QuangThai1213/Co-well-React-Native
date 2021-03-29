@@ -4,6 +4,7 @@ import OnBoardScreen from './OnBoardScreen';
 import LoginScreen from './LoginScreen';
 import TestScreen from './TestScreen';
 import DetailScreen from './DetailScreen';
+import ListScreen from './ListScreen';
 export {
   SplashScreen,
   HomeScreen,
@@ -11,4 +12,5 @@ export {
   LoginScreen,
   TestScreen,
   DetailScreen,
+  ListScreen,
 };

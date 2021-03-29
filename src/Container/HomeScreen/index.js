@@ -2,6 +2,7 @@
 import React, {Component} from 'react';
 import {View, Text, StatusBar} from 'react-native';
 import MainScreen from './MainScreen';
+import {ListScreen} from '@Containers';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 const Tab = createBottomTabNavigator();
@@ -44,10 +45,7 @@ export default class HomeScreen extends Component {
             inactiveTintColor: 'gray',
           }}>
           <Tab.Screen name="Shop" component={MainScreen} />
-          <Tab.Screen
-            name="Danh mục"
-            children={() => <TestScreen title={'Danh mục'} />}
-          />
+          <Tab.Screen name="Danh mục" children={() => <ListScreen />} />
           <Tab.Screen
             name="Giỏ hàng"
             children={() => <TestScreen title={'Giỏ hàng'} />}
