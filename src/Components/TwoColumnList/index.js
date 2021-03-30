@@ -1,7 +1,7 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {Component} from 'react';
 import {FlatList} from 'react-native';
-import {CategoriesItem} from '@Components';
+import {CategoriesItem, ProductItem} from '@Components';
 import PropTypes from 'prop-types';
 export default class TwoColumnList extends Component {
   renderItem(item, index, navigation) {
@@ -9,12 +9,21 @@ export default class TwoColumnList extends Component {
       return (
         <CategoriesItem
           onPress={() => {
-            // navigation.navigate('Item');
+            navigation.navigate('Item');
           }}
           image={item.image}
           title={item.title}
           borderColor={item.borderColor}
           backgroundColor={item.backgroundColor}
+        />
+      );
+    }
+    if (this.props.type === 'item') {
+      return (
+        <ProductItem
+          product={item}
+          navigation={navigation}
+          customStyle={{width: '50%'}}
         />
       );
     }

@@ -2,10 +2,23 @@
 import React, {Component} from 'react';
 import {View, Text, StatusBar} from 'react-native';
 import MainScreen from './MainScreen';
-import {CategoriesScreen} from '@Containers';
+import {CategoriesScreen, ItemScreen, DetailScreen} from '@Containers';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import {createStackNavigator} from '@react-navigation/stack';
 const Tab = createBottomTabNavigator();
+
+const CategoriesStack = createStackNavigator();
+
+function CategoriesStackScreen() {
+  return (
+    <CategoriesStack.Navigator initialRouteName="Categories" headerMode="none">
+      <CategoriesStack.Screen name="Categories" component={CategoriesScreen} />
+      <CategoriesStack.Screen name="Item" component={ItemScreen} />
+      <CategoriesStack.Screen name="Detail" component={DetailScreen} />
+    </CategoriesStack.Navigator>
+  );
+}
 export default class HomeScreen extends Component {
   constructor(props) {
     super(props);
@@ -45,7 +58,7 @@ export default class HomeScreen extends Component {
             inactiveTintColor: 'gray',
           }}>
           <Tab.Screen name="Shop" component={MainScreen} />
-          <Tab.Screen name="Danh mục" children={() => <CategoriesScreen />} />
+          <Tab.Screen name="Danh mục" component={CategoriesStackScreen} />
           <Tab.Screen
             name="Giỏ hàng"
             children={() => <TestScreen title={'Giỏ hàng'} />}

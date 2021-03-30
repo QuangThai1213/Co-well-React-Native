@@ -10,8 +10,6 @@ import {
   SplashScreen,
   OnBoardScreen,
   DetailScreen,
-  ItemScreen,
-  CategoriesScreen,
 } from '@Containers';
 
 import {View, StatusBar} from 'react-native';
@@ -34,8 +32,6 @@ function App() {
           <Stack.Screen name="Login" component={LoginScreen} />
           <Stack.Screen name="OnBoard" component={OnBoardScreen} />
           <Stack.Screen name="Detail" component={DetailScreen} />
-          <Stack.Screen name="Category" component={CategoriesScreen} />
-          <Stack.Screen name="Item" component={ItemScreen} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>

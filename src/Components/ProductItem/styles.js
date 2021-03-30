@@ -2,12 +2,16 @@ import {StyleSheet, Dimensions} from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    flex: 1,
-    width: '50%',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 7,
+    paddingTop: 15,
+    // backgroundColor: 'rgba(2,222,222,0.1)',
+  },
+  button: {
     borderRadius: 18,
     borderWidth: 1,
     borderColor: 'grey',
-    marginHorizontal: 15,
     paddingBottom: 20,
   },
   imageContainer: {

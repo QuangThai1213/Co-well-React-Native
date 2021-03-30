@@ -48,13 +48,13 @@ export default class CategoriesScreen extends Component {
                 borderColor: 'rgba(247,165,147,1)',
                 backgroundColor: 'rgba(247,165,147,0.1)',
               },
-              {
-                image:
-                  'https://s3-alpha-sig.figma.com/img/e2fa/ac00/a6029bf4a611c1016eaf4b8f75db6d65?Expires=1618185600&Signature=MD9nqWwONK5FSQ9K4Qo7ZTCB9FJtct4RnmZwD2BOdiM2sGEJksdTTHlHaYXrPq8NiFtXkxmO1HaNePcPQjEEp9azC2hvguX~wrh7gRLT8f29uRnxvK~EY9JDRBHykab7c3FAZzD0FEsP3-czLz8UKt6JPSVMpbwhYCxI1spsccVqnydRMDPvezA8JsCLpUpa7JTPvnhV0Xk8ZnJenegnDcIZoJVkmp8fC7WPnr~c8ujrhVJ5WGR8p2JZ0niAH8SuykM4QNrtGg810GPGzJrfRD173TyQFIm3iSd7p4i87nlRjC5MHhs9y855vCO1n5bN-FoElEbz81RjWEenDC1yiA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
-                title: 'Bánh mỳ và Đồ ăn nhẹ',
-                borderColor: 'rgba(211,176,224,1)',
-                backgroundColor: 'rgba(211,176,224,0.1)',
-              },
+              // {
+              //   image:
+              //     'https://s3-alpha-sig.figma.com/img/e2fa/ac00/a6029bf4a611c1016eaf4b8f75db6d65?Expires=1618185600&Signature=MD9nqWwONK5FSQ9K4Qo7ZTCB9FJtct4RnmZwD2BOdiM2sGEJksdTTHlHaYXrPq8NiFtXkxmO1HaNePcPQjEEp9azC2hvguX~wrh7gRLT8f29uRnxvK~EY9JDRBHykab7c3FAZzD0FEsP3-czLz8UKt6JPSVMpbwhYCxI1spsccVqnydRMDPvezA8JsCLpUpa7JTPvnhV0Xk8ZnJenegnDcIZoJVkmp8fC7WPnr~c8ujrhVJ5WGR8p2JZ0niAH8SuykM4QNrtGg810GPGzJrfRD173TyQFIm3iSd7p4i87nlRjC5MHhs9y855vCO1n5bN-FoElEbz81RjWEenDC1yiA__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA',
+              //   title: 'Bánh mỳ và Đồ ăn nhẹ',
+              //   borderColor: 'rgba(211,176,224,1)',
+              //   backgroundColor: 'rgba(211,176,224,0.1)',
+              // },
             ]}
           />
         </SafeAreaView>
