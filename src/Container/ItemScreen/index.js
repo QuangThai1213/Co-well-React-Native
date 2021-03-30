@@ -2,17 +2,23 @@ import React, {Component} from 'react';
 import {ScrollView} from 'react-native';
 import {SearchBar, TopBar, TwoColumnList} from '@Components';
 import {SafeAreaView} from 'react-native-safe-area-context';
-export default class CategoriesScreen extends Component {
+export default class ItemScreen extends Component {
   constructor(props) {
     super(props);
     this.state = {value: ''};
   }
+
   render() {
-    const {navigation} = this.props;
+    const navigation = this.props.navigation;
     return (
       <ScrollView>
         <SafeAreaView>
-          <TopBar mid="Tìm kiếm sản phẩm" />
+          <TopBar
+            navigation={navigation}
+            left={{name: 'arrow-left'}}
+            right={{name: 'arrow-left'}}
+            mid="Tìm kiếm sản phẩm"
+          />
           <SearchBar
             placeholder="Tìm kiếm...."
             value={this.state.value}
@@ -24,7 +30,6 @@ export default class CategoriesScreen extends Component {
             }}
           />
           <TwoColumnList
-            navigation={navigation}
             type={'category'}
             data={[
               {

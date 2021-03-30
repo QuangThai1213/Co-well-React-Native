@@ -5,6 +5,7 @@ import LoginScreen from './LoginScreen';
 import TestScreen from './TestScreen';
 import DetailScreen from './DetailScreen';
 import CategoriesScreen from './CategoriesScreen';
+import ItemScreen from './ItemScreen';
 export {
   SplashScreen,
   HomeScreen,
@@ -13,4 +14,5 @@ export {
   TestScreen,
   DetailScreen,
   CategoriesScreen,
+  ItemScreen,
 };

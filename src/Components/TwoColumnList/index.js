@@ -4,10 +4,13 @@ import {FlatList} from 'react-native';
 import {CategoriesItem} from '@Components';
 import PropTypes from 'prop-types';
 export default class TwoColumnList extends Component {
-  renderItem(item, index) {
+  renderItem(item, index, navigation) {
     if (this.props.type === 'category') {
       return (
         <CategoriesItem
+          onPress={() => {
+            // navigation.navigate('Item');
+          }}
           image={item.image}
           title={item.title}
           borderColor={item.borderColor}
@@ -17,6 +20,7 @@ export default class TwoColumnList extends Component {
     }
   }
   render() {
+    const navigation = this.props.navigation;
     return (
       <FlatList
         style={{
@@ -26,7 +30,7 @@ export default class TwoColumnList extends Component {
         }}
         numColumns={2}
         data={this.props.data}
-        renderItem={({item, index}) => this.renderItem(item, index)}
+        renderItem={({item, index}) => this.renderItem(item, index, navigation)}
       />
     );
   }

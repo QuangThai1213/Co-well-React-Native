@@ -28,7 +28,7 @@ export default class CategoriesItem extends Component {
         <TouchableOpacity
           style={[defaultStyles, customStyles]}
           onPress={() => {
-            console.log('okok');
+            this.props.onPress();
           }}>
           <Image
             style={{
